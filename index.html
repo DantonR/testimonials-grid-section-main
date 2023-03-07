@@ -36,9 +36,13 @@
       <section class="testimonials">
         <template v-for="item in data">
           <div class="card">
-            <img :src="'./' + item.Name" alt="" />
-            <p>{{ item.Name }}</p>
-            <p>{{ item.Position }}</p>
+            <div class="card__profile">
+              <img :src="'./images/' + item.Image" class="card__image" alt="" />
+              <div>
+                <p class="card__name">{{ item.Name }}</p>
+                <p class="card__position">{{ item.Position }}</p>
+              </div>
+            </div>
             <h3 class="highlight">{{ item.Highlight }}</h3>
             <p class="quote">{{ item.Quote }}</p>
           </div>
